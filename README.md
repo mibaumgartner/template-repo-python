@@ -56,7 +56,7 @@ If you want to add/change some unit-tests, you should do this in a new python fi
 
 They are basically doing the same, but `coverage` additionally checks, how many of your code-lines are currently covered by your tests.
 
-The unittests are also automatically triggered within [CI/CD]()
+The unittests are also automatically triggered within [CI/CD](#cicd)
 
 ### Specifying Codecov
 The [`.codecov.yml`](.codecov.yml) file specifies, how coverage should behave, how to calculate the coverage (i.e. what files to include for line counting) etc. 
