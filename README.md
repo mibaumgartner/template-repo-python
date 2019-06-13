@@ -50,3 +50,40 @@ This includes the default information for me and must be adjusted to your needs:
 * `license` specifies the license you want to release your code with. This is parsed from a `LICENSE` file.
 
 There are still many other options to include here, but these are the most basic ones.
+
+### Unittests
+If you want to add/change some unit-tests, you should do this in a new python file starting with `test_`. [Here](https://docs.python.org/3/library/unittest.html) is a good introduction on how to write unittests with the `unittest` framework. After you added these tests, you may run them with either `coverage run -m unittest`or `python -m unittest`.
+
+They are basically doing the same, but `coverage` additionally checks, how many of your code-lines are currently covered by your tests.
+
+The unittests are also automatically triggered within [CI/CD]()
+
+### Specifying Codecov
+The [`.codecov.yml`](.codecov.yml) file specifies, how coverage should behave, how to calculate the coverage (i.e. what files to include for line counting) etc. 
+
+### Requirements
+If you want to add new requirements, simply add them to the [`requirements.txt`](requirements.txt) file.
+
+### Packaging on PyPi
+If you plan to release your package on pypi, ship wheels for it, you might need the [`MANSIFEST.in`](MANIFEST.in) file, since it specifies (among other things), which files to include to your binaries.
+
+### Setup.cfg
+The [`setup.cfg`](setup.cfg) file currently only specifies, which directories to exclude from style checking.
+
+### Gitignore
+The `.gitignore` file is a real life saver. It prevents files and directories that match certain patterns from being added to your git repository, when you push new stuff to it. You may append more specific patterns here.
+
+### CI/CD
+Now, we talked a lot about CI/CD. This repository uses [`travis`](https://travis-ci.com) as CI/CD and per default simply runs tests and style checks for your code.
+
+To use this feature, you have to enable travis for your repository.
+
+#### YAMl-Specifications
+The [`.travis.yml`](.travis.yml) file specifies the CI/CD behavior. Currently it only runs tests and style-checks  with Python 3.7 on Linux Xenial. You may also include additional cases to the test matrix or add deployment (e.g. deploying your docs to GitHub Pages or similar stuff).
+
+#### Scripts
+The scripts used b CI/CD to install the requirements and run your tests are lying at [`scripts/ci`](scripts/ci).
+The file names indicate pretty well, what tey're doing. Of course you can customize them too.
+
+If you want Travis to automatically fix your code style where possible you have to add a github access token to travis, comment in the [lines 6-28](scripts/ci/run_style_checks.sh#L6-L28) and change the environment variable and the repository in [line 27](scripts/ci/run_style_checks.sh#L27).
+
