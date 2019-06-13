@@ -37,7 +37,7 @@ setup(
 This includes the default information for me and must be adjusted to your needs:
 
 * `name` provides the package-name you can later import
-* `version` provides the package-version (which will currently be extracted from your package#s `__init__.py`, but be also set manually)
+* `version` provides the package-version (which will currently be extracted from your package's `__init__.py`, but be also set manually)
 * `packages` is a list defining all packages (and their sub-packages and the sub-packages of their sub-packages and so on...), that should be installed. This is automatically extracted by `find_packages`, which also accepts some sub-packages to ignore (besides some other arguments).
 `url` specifies the packages homepage (in this case the current GitHub repo); You might want to change it to your repos homepage.
 * `test_suite` defines the test-suite to use for your unittests. In this repo template, we'll python's built-in framework `unittest`, but you can change this too; *Just make sure to also change this, when we get to CI/CD.*
