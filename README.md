@@ -2,6 +2,16 @@
 
 This repository contains a fully-functionable package structure including (empty) tests.
 
+It's features include (but are not limited to):
+* An already working package structure
+* A working requirement handling
+* Minimal effort pypi releases
+* Pre-Configured CI/CD (With Travis)
+* Code coverage analysis
+* Python Code Style Checks
+
+> If you want to add something to this repo, please submit a PR. Contributions are very welcome.
+
 ## Customize it!
 
 To customize this repo, you need to have a look at the following chapters.
