@@ -39,18 +39,17 @@ _version = find_version(os.path.join(os.path.dirname(__file__), "template-repo",
 
 
 setup(
-    name='template-repo',
+    name='template_package',
     version=_version,
     packages=find_packages(),
-    url='https://github.com/justusschock/template-repo',
+    url='https://github.com/justusschock/template-repo-python',
     test_suite="unittest",
-    long_description="",
+    long_description=readme,
     long_description_content_type='text/markdown',
     install_requires=requirements,
     tests_require=["coverage"],
     python_requires=">=3.5",
     author="Justus Schock",
     author_email="justus.schock@rwth-aachen.de",
-    license="MIT",
-    
+    license=license,
 )
