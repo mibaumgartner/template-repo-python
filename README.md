@@ -1,4 +1,4 @@
-# Python Template Repository
+# Delira based Deep Learning Template
 
 This repository contains a fully-functionable package structure including (empty) tests.
 
@@ -32,15 +32,15 @@ setup(
     name='template_package',
     version=_version,
     packages=find_packages(),
-    url='https://github.com/justusschock/template-repo-python',
+    url='to/url',
     test_suite="unittest",
     long_description=readme,
     long_description_content_type='text/markdown',
     install_requires=requirements,
     tests_require=["coverage"],
     python_requires=">=3.5",
-    author="Justus Schock",
-    author_email="justus.schock@rwth-aachen.de",
+    author="name",
+    author_email="mail",
     license=license,
 )
 ```
