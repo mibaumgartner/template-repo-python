@@ -1,3 +1,4 @@
+# The original Repo can be found at https://github.com/justusschock/template-repo-python
 # Delira based Deep Learning Template
 
 This repository contains a fully-functionable package structure including (empty) tests.
